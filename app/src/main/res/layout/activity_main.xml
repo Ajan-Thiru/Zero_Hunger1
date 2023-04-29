@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/logo"
+        android:contentDescription="@string/logo"
         android:layout_width="400dp"
         android:layout_height="413dp"
         android:layout_marginEnd="16dp"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:fontFamily="sans-serif"
-        android:text="WELCOME TO FOODONATION"
+        android:text="@string/welcome_to_foodonation"
         android:textColor="@color/blue"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

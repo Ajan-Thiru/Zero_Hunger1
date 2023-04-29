@@ -32,7 +32,7 @@
 
         <TextView
             android:id="@+id/date"
-            android:text="25th Aug 2021"
+            android:text="@string/_25th_aug_2021"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
@@ -46,23 +46,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="4dp"
-            android:layout_toRightOf="@id/pic_chat"
+            android:layout_toEndOf="@id/pic_chat"
             android:background="@color/blue"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
-            android:paddingRight="10dp"
-            android:text="Hi there \nWelcome to the chat"
+            android:paddingEnd="10dp"
+            android:text="@string/hi_there_nwelcome_to_the_chat"
             android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/pic_chat"
+            android:contentDescription="@string/chat_pic"
             android:layout_width="35dp"
             android:layout_height="38dp"
             android:layout_below="@+id/date"
-            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
 
             android:layout_marginTop="18dp"
             android:background="@drawable/account"
@@ -83,14 +84,14 @@
             android:id="@+id/chat2"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
             android:layout_marginTop="4dp"
             android:background="#FFFDD0"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:paddingTop="15dp"
-            android:paddingRight="10dp"
-            android:text="Yes, testing Chat UI"
+            android:paddingEnd="10dp"
+            android:text="@string/yes_testing_chat_ui"
             android:textColor="@color/black" />
 
 
@@ -118,22 +119,23 @@
         <TextView
             android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="4dp"
-            android:layout_toRightOf="@id/pic_chat2"
+            android:layout_toEndOf="@id/pic_chat2"
             android:background="@color/blue"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:paddingTop="15dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:text="Wanna request this food? \nPick up time is 4-5 PM at the mentioned address."
+            android:text="@string/wanna_request_this_food_npick_up_time_is_4_5_pm_at_the_mentioned_address"
             android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/pic_chat2"
+            android:contentDescription="@string/chat_pic"
             android:layout_width="35dp"
             android:layout_height="38dp"
-            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/account"
             >
@@ -151,14 +153,14 @@
             android:id="@+id/thanks"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
             android:layout_marginTop="4dp"
             android:background="#FFFDD0"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:paddingTop="15dp"
-            android:paddingRight="10dp"
-            android:text="Yes, means a lot. I will be \nto collect "
+            android:paddingEnd="10dp"
+            android:text="@string/yes_means_a_lot_i_will_be_nto_collect"
             android:textColor="@color/black" />
 
 
@@ -166,10 +168,10 @@
             android:layout_width="58dp"
             android:layout_height="20dp"
             android:layout_marginTop="70dp"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true"
-            android:paddingLeft="15dp"
-            android:text="Seen"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="15dp"
+            android:text="@string/seen"
             android:textColor="#9B9B9B" />
 
 
@@ -189,15 +191,15 @@
         <TextView
             android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="4dp"
-            android:layout_toRightOf="@id/pic_chat3"
+            android:layout_toEndOf="@id/pic_chat3"
             android:background="@color/blue"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:paddingTop="15dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:text="I will wait, thank you!"
+            android:text="@string/i_will_wait_thank_you"
             android:textColor="@color/black" />
 
 
@@ -206,10 +208,10 @@
             android:id="@+id/pic_chat3"
             android:layout_width="35dp"
             android:layout_height="38dp"
-            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/account"
-            >
+            android:contentDescription="@string/chat_pic">
         </ImageView>
     </RelativeLayout>
 

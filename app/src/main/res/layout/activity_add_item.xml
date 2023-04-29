@@ -13,10 +13,11 @@
     <EditText
         android:id="@+id/name"
         android:layout_width="362dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -29,12 +30,13 @@
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Food title"
+        android:hint="@string/food_title"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/description"
@@ -43,11 +45,12 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Food description"
+        android:hint="@string/food_description"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/address"
@@ -55,12 +58,13 @@
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Address"
+        android:hint="@string/address"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/add"
@@ -69,7 +73,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
         android:backgroundTint="@color/blue"
-        android:text="add_item"
+        android:text="@string/add_item"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +85,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Add new Product"
+        android:text="@string/add_new_product"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginTop="4dp"
-        android:text="Upload Pictures"
+        android:text="@string/upload_pictures"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.87"
@@ -103,6 +107,7 @@
 
     <ImageButton
         android:id="@+id/add_pictures"
+        android:contentDescription="@string/add_pictures_button"
         android:layout_width="94dp"
         android:layout_height="71dp"
         android:layout_marginTop="44dp"
@@ -115,6 +120,7 @@
 
     <ImageView
         android:id="@+id/image"
+        android:contentDescription="@string/image"
         android:layout_width="212dp"
         android:layout_height="103dp"
         android:layout_marginTop="32dp"
