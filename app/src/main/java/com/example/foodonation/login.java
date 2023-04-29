@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -86,7 +87,7 @@ public class login extends AppCompatActivity {
                     if(checkuserpass==true)
                     {
                         Toast.makeText(login.this, "SUCCESSFUL SIGN IN", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(login.this, Animation.class);
+                        Intent i=new Intent(login.this, dashboard.class);
                         startActivity(i);
                     }
                     else
