@@ -9,9 +9,9 @@
     <application
         android:allowBackup="true"
         android:requestLegacyExternalStorage="true"
-        android:icon="@drawable/account"
+        android:icon="@drawable/logo"
         android:label="ZHunger"
-        android:roundIcon="@drawable/account"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodonation">
         <activity android:name=".done"

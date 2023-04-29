@@ -9,15 +9,14 @@
 
     <ImageView
         android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:contentDescription="@string/logo"
-        android:layout_width="400dp"
-        android:layout_height="413dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.245"
-        app:srcCompat="@drawable/account" />
+        app:srcCompat="@drawable/main" />
 
     <TextView
         android:id="@+id/welcome"
@@ -25,13 +24,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:fontFamily="sans-serif"
-        android:text="@string/welcome_to_foodonation"
+        android:text="@string/welcome_to_ZHunger"
         android:textColor="@color/blue"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892" />
 </androidx.constraintlayout.widget.ConstraintLayout>
