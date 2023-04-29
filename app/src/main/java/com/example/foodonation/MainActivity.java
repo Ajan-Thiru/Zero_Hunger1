@@ -20,12 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         //auto activity switch
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                finish();
-                Intent i3 = new Intent(MainActivity.this, login.class);
-                startActivity(i3);
-            }
+        handler.postDelayed(() -> {
+            finish();
+            Intent i3 = new Intent(MainActivity.this, login.class);
+            startActivity(i3);
         }, _splashTime);
     }
 

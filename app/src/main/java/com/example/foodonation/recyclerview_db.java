@@ -6,13 +6,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import android.provider.SyncStateContract;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-
-import com.facebook.appevents.codeless.internal.Constants;
 
 import java.util.ArrayList;
 
@@ -123,7 +119,8 @@ public class recyclerview_db extends SQLiteOpenHelper {
             arrayList.add(food);
         }while(cursor.moveToNext());
     }
-        MyDB.close();
+    cursor.close();
+    MyDB.close();
     return arrayList;
     }
 

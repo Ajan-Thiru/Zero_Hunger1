@@ -46,27 +46,31 @@ public class Database extends SQLiteOpenHelper {
     }
 
     //check username duplicate entry
-    public Boolean checkUsername(String username)
-    {
-        SQLiteDatabase MyDB= this.getWritableDatabase();
-       Cursor cursor=MyDB.rawQuery("Select * from users where username =?", new String[]{username});
+    public Boolean checkUsername(String username) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from users where username =?", new String[]{username});
 
-        if(cursor.getCount()>0)
-        return true;
-        else
+        if (cursor.getCount() > 0) {
+            cursor.close();
+            return true;
+        } else {
+            cursor.close();
             return false;
+        }
     }
 
     //check duplicate entry for both- username, pw
 
-    public Boolean checkUsernamepassword(String username, String password)
-    {
-        SQLiteDatabase MyDB= this.getWritableDatabase();
-        Cursor cursor=MyDB.rawQuery("Select * from users where username =? and password=?", new String[]{username,password});
+    public Boolean checkUsernamepassword(String username, String password) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from users where username =? and password=?", new String[]{username, password});
 
-        if(cursor.getCount()>0)
+        if (cursor.getCount() > 0) {
+            cursor.close();
             return true;
-        else
+        } else {
+            cursor.close();
             return false;
+        }
     }
 }

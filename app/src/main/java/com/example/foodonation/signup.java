@@ -1,17 +1,13 @@
 package com.example.foodonation;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class signup extends AppCompatActivity {
 
@@ -39,40 +35,37 @@ public class signup extends AppCompatActivity {
         pw.setTransformationMethod(new PasswordTransformationMethod());
         confirmpw.setTransformationMethod(new PasswordTransformationMethod());
 
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username=name.getText().toString();
-                String password=pw.getText().toString();
-                String confirmpass=confirmpw.getText().toString();
+        signup.setOnClickListener(v -> {
+            String username=name.getText().toString();
+            String password=pw.getText().toString();
+            String confirmpass=confirmpw.getText().toString();
 
-                if(username.equals("") || password.equals("") || confirmpass.equals(""))
-                    Toast.makeText(signup.this, "Please enter all the fields", Toast.LENGTH_LONG).show();
-                else{
-                    if(password.equals(confirmpass))
-                    {
-                        Boolean checkuser=DB.checkUsername(username);
-                        if(checkuser==false){
-                            Boolean insert=DB.insertData(username,password);
-                            if(insert==true)
-                            {
-                                Toast.makeText(signup.this, "registered successfully", Toast.LENGTH_LONG).show();
-                                Intent i=new Intent(signup.this,login.class);
-                            }
-                            else
-                            {
-                                Toast.makeText(signup.this, "registration failed", Toast.LENGTH_LONG).show();
-                            }
+            if(username.equals("") || password.equals("") || confirmpass.equals(""))
+                Toast.makeText(signup.this, "Please enter all the fields", Toast.LENGTH_LONG).show();
+            else{
+                if(password.equals(confirmpass))
+                {
+                    Boolean checkuser=DB.checkUsername(username);
+                    if(!checkuser){
+                        Boolean insert=DB.insertData(username,password);
+                        if(insert)
+                        {
+                            Toast.makeText(signup.this, "registered successfully", Toast.LENGTH_LONG).show();
+                            Intent i=new Intent(signup.this,login.class);
                         }
                         else
                         {
-                            Toast.makeText(signup.this, "user already exists please sign in", Toast.LENGTH_LONG).show();
+                            Toast.makeText(signup.this, "registration failed", Toast.LENGTH_LONG).show();
                         }
                     }
                     else
                     {
-                        Toast.makeText(signup.this, "passwords not matching", Toast.LENGTH_LONG).show();
+                        Toast.makeText(signup.this, "user already exists please sign in", Toast.LENGTH_LONG).show();
                     }
+                }
+                else
+                {
+                    Toast.makeText(signup.this, "passwords not matching", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -1,14 +1,13 @@
 package com.example.foodonation;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class viewItem extends AppCompatActivity {
 
@@ -42,12 +41,9 @@ public class viewItem extends AppCompatActivity {
 
         img.setImageURI(Uri.parse(getIntent().getStringExtra("image")));
 
-        request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(viewItem.this, done.class);
-                startActivity(i);
-            }
+        request.setOnClickListener(v -> {
+            Intent i=new Intent(viewItem.this, done.class);
+            startActivity(i);
         });
     }
 }

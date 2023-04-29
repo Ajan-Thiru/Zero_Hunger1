@@ -1,7 +1,5 @@
 package com.example.foodonation;
 
-import java.util.ArrayList;
-
 public class Food {
     String id,title, name,address,description,image;
 

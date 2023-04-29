@@ -1,15 +1,13 @@
 package com.example.foodonation;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
-import android.view.View;
-import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -66,38 +64,32 @@ public class login extends AppCompatActivity {
        });
 
         //---------------------------------
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(login.this, signup.class);
-                startActivity(i);
-            }
+        signup.setOnClickListener(v -> {
+            Intent i=new Intent(login.this, signup.class);
+            startActivity(i);
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String user=username.getText().toString();
-                String pass=password.getText().toString();
+        login.setOnClickListener(v -> {
+            String user=username.getText().toString();
+            String pass=password.getText().toString();
 
-                if(user.equals("") || pass.equals(""))
-                    Toast.makeText(login.this, "Please enter all the fields", Toast.LENGTH_LONG).show();
-                else {
-                    Boolean checkuserpass = DB.checkUsernamepassword(user,pass);
-                    if(checkuserpass==true)
-                    {
-                        Toast.makeText(login.this, "SUCCESSFUL SIGN IN", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(login.this, dashboard.class);
-                        startActivity(i);
-                    }
-                    else
-                    {
-                        Toast.makeText(login.this, "Invalid credentials", Toast.LENGTH_LONG).show();
-                    }
-
+            if(user.equals("") || pass.equals(""))
+                Toast.makeText(login.this, "Please enter all the fields", Toast.LENGTH_LONG).show();
+            else {
+                Boolean checkuserpass = DB.checkUsernamepassword(user,pass);
+                if(checkuserpass)
+                {
+                    Toast.makeText(login.this, "SUCCESSFUL SIGN IN", Toast.LENGTH_LONG).show();
+                    Intent i=new Intent(login.this, dashboard.class);
+                    startActivity(i);
                 }
-                    }
-        });
+                else
+                {
+                    Toast.makeText(login.this, "Invalid credentials", Toast.LENGTH_LONG).show();
+                }
+
+            }
+                });
 
     }
 

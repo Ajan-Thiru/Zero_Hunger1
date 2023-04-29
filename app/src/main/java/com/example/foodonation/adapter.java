@@ -1,14 +1,8 @@
 package com.example.foodonation;
 
-import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.provider.SyncStateContract;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 
 public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> implements Filterable {
@@ -74,18 +67,15 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> implemen
         holder.image.setImageURI(Uri.parse(image));
 
 
-        holder.image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(context, viewItem.class);
-                i.putExtra("title",temp.getTitle());
-                i.putExtra("name",temp.getName());
-                i.putExtra("address",temp.getAddress());
-                i.putExtra("description",temp.getDescription());
-                i.putExtra("image",temp.getImage());
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(i);
-            }
+        holder.image.setOnClickListener(v -> {
+            Intent i=new Intent(context, viewItem.class);
+            i.putExtra("title",temp.getTitle());
+            i.putExtra("name",temp.getName());
+            i.putExtra("address",temp.getAddress());
+            i.putExtra("description",temp.getDescription());
+            i.putExtra("image",temp.getImage());
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);
         });
 
     }
